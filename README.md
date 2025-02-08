@@ -1,2 +1,2 @@
 # Automated-reports
-Here user can see generated reports!
+Here, users can view generated reports!
