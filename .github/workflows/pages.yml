@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's not 'main'
+      - main  # Trigger only on changes to the main branch
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Adjust if your site files are in a specific folder
+          publish_dir: ./  # If regression_report.html is in the root directory
