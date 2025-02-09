@@ -3,18 +3,20 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger only on changes to the main branch
+      - main  # Trigger workflow on pushes to the main branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout the repository
         uses: actions/checkout@v3
 
+      # Step 2: Deploy files to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # If regression_report.html is in the root directory
+          publish_dir: ./  # Root directory containing regression_report.html
