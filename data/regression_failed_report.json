@@ -5,7 +5,7 @@
                 "series_id": "1.2.826.0.1.3680043.8.498.12102778265673502135829330984645254558",
                 "result_json_error": "182.0",
                 "sr_tests_passed": "True",
-                "metadata_error_dict": "{}",
+                "metadata_error_dict": "{Naveen Mishra CSE}",
                 "pixel_diff": "1805.9847115929706"
             },
             "Q8-5378401B": {
