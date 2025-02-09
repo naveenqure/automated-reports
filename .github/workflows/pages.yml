@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Trigger workflow on pushes to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,9 +14,10 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
-      # Step 2: Deploy files to GitHub Pages
+      # Step 2: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Root directory containing regression_report.html
+          publish_dir: ./  # Adjust if your files are in a subfolder
+          publish_branch: gh-pages  # Deploy to the gh-pages branch
